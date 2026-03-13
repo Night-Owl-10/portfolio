@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,11 +10,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html{
+html {
     font-size: 62.5%;
 }
 
-body{
+body {
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
@@ -22,7 +22,7 @@ body{
     color: white;
 }
 
-header{
+header {
     margin-top: 0px;
     position: fixed;
     top: 0;
@@ -37,7 +37,7 @@ header{
     z-index: 100;
 }
 
-.logo{
+.logo {
     font-size: 3rem;
     color: white;
     font-weight: 800;
@@ -45,11 +45,11 @@ header{
     transition: 0.5s ease;
 }
 
-.logo:hover{
+.logo:hover {
     transform: scale(1.1);
 }
 
-nav a{
+nav a {
     font-size: 1.8rem;
     color: white;
     margin-left: 4rem;
@@ -58,7 +58,7 @@ nav a{
     border-bottom: 3px solid transparent;
 }
 
-nav a:hover{
+nav a:hover {
     color: purple;
     border-bottom: 3px solid purple;
 }
@@ -67,8 +67,8 @@ html {
     scroll-behavior: smooth;
 }
 
-@media(max-width:995px){
-    nav{
+@media(max-width:767px) {
+    nav {
         position: absolute;
         display: none;
         width: 40%;
@@ -80,33 +80,40 @@ html {
         border-bottom-left-radius: 2rem;
         padding: 1rem solid;
         background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
     }
 
-    nav.active{
+    nav.active {
         display: block;
     }
 
-    nav a{
+    nav a {
         display: block;
         font-size: 2rem;
         margin-left: 3rem;
     }
 
     nav a:hover,
-    nav a.active{
+    nav a.active {
         padding: 1rem;
         border-radius: 0.5rem;
         border-bottom: 0.5rem solid purple;
     }
 }
 
-section{
-    min-height: 90vh;
-    padding: 5rem 9% 5rem;
+@media(min-width:768px) and (max-width:1023px) {
+    nav a {
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
 }
 
-.home{
+section {
+    min-height: 90vh;
+    padding: 1rem 9%;
+}
+
+.home {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,54 +121,50 @@ section{
     background-color: black;
 }
 
-.home .home-content h1{
+.home .home-content h1 {
     font-size: 6rem;
     font-weight: 700;
     line-height: 1.3;
 }
 
-.home .home-content h2{
-    font-size: 4.5rem;
-    font-weight: 700;
-    line-height: 1.3;
-}
 
-
-span{
+span {
     color: purple;
 }
 
-.home-content h3{
+.home-content h3 {
     font-size: 4rem;
     margin-bottom: 1rem;
     font-weight: 700;
 }
 
-.home-content p{
+.home-content p {
     font-size: 1.6rem;
 }
 
-.home-img{
+.home-img {
     border-radius: 20px;
-    padding-top: 20px;
+    margin-top: 100px;
+    width: 350px;
+    height: 550px;
 }
 
-.home-img img{
+.home-img img {
     position: relative;
-    width: 30vw;
-    height: 40vw;
+    width: 100%;
+    height: 100%;
     border-radius: 20px;
     box-shadow: 0 0 25px solid purple;
     cursor: pointer;
     transition: 0.2s linear;
 }
 
-.home-img img:hover{
+.home-img img:hover {
     font-size: 1.8rem;
     font-weight: 500;
 }
 
-.social-icons a{
+.social-icons a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -176,14 +179,14 @@ span{
     color: purple;
 }
 
-.social-icons a:hover{
+.social-icons a:hover {
     color: black;
     transform: scale(1.3) translateY(-5px);
     background-color: purple;
-    box-shadow: 0  0 25px purple;
+    box-shadow: 0 0 25px purple;
 }
 
-.btn{
+.btn {
     display: inline-block;
     padding: 1rem 2.8rem;
     background-color: black;
@@ -197,62 +200,98 @@ span{
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
     transform: scale3d(1.03);
     background-color: purple;
     color: black;
     box-shadow: 0 0 25px purple;
 }
 
-.text{
+.text {
     font-size: 34px;
     font-weight: 600;
     min-width: 280px;
 }
 
-.text span{
+.text span {
     position: relative;
 }
 
-.text span{
+.text span {
     color: purple;
 }
 
 
-@media (max-width: 1000px){
-    .home{
+@media(min-width:768px) and (max-width:1023px) {
+    .home {
         gap: 4rem;
     }
-}
 
-@media(max-width:995px){
-    .home{
-        flex-direction: column;
-        margin: 5rem 4rem;
-    }
-
-    .home .home-content h3{
+    .home .home-content h3 {
         font-size: 2.5rem;
     }
 
-    .home-content h1{
-        font-size: 5rem;
+    .home .home-content h1 {
+        font-size: 4.5rem;
     }
 
-    .home-img img{
-        width: 70vw;
-        height:70vw;
-        margin-top: 4rem;
+    .home-img {
+        width: 400px;
+        height: 400px;
+        margin-top: 50px;
+    }
+
+    .social-icons {
+        margin-left: 80px;
+    }
+}
+
+@media(max-width:767px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+        gap: 4rem;
+    }
+
+    .home-img {
+        margin-top: 40px;
+        width: 250px;
+        height: 400px;
+    }
+
+    .home-img img {
+        width: 100%;
+        height: 100%;
+        margin-top: 0rem;
+    }
+
+    .home .home-content h1 {
+        font-size: 4.5rem;
+        font-weight: 600;
+        line-height: 1.2;
+        text-align: center;
+    }
+
+    .home .home-content h3 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
 /*---------------------About Section------------------*/
 
 #about {
-    padding:80px 0px;
     color: white;
     padding: 1rem 9%;
-    margin-top: 60px;;
+    margin-top: 60px;
 }
 
 .moreInfo {
@@ -263,11 +302,11 @@ span{
     display: flex;
     font-size: 15px;
     justify-content: space-between;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .about-col-1 {
-    flex-basis: 35%;
+    flex-basis: 30%;
 }
 
 .about-col-1 img {
@@ -284,14 +323,14 @@ span{
 .sub-title {
     font-size: 4rem;
     font-weight: 600;
-    color:white;
+    color: white;
 }
 
 .sub-title span {
     margin-left: 10px;
 }
 
-.button{
+.button {
     display: inline-block;
     padding: 1rem 2.8rem;
     background-color: black;
@@ -306,7 +345,7 @@ span{
     margin: 20px 0px;
 }
 
-.button:hover{
+.button:hover {
     transform: scale3d(1.03);
     background-color: purple;
     color: black;
@@ -317,21 +356,84 @@ span{
     display: none;
 }
 
-@media(max-width:995px){
-    .row{
+@media(max-width:767px) {
+    .row {
         flex-direction: column;
-        margin: 5rem 4rem;
+        /* margin: 5rem 4rem; */
+    }
+
+    .about-col-2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button {
+        padding: 0.9rem 2.5rem;
+        font-size: 1.3rem;
+        letter-spacing: 0.2rem;
+        font-weight: 600;
+        margin: 20px 0px 40px 0px;
+    }
+
+    .sub-title {
+        font-size: 3.8rem;
+        color: white;
+        text-align: center;
+    }
+
+    .about-col-1 {
+        flex-basis: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-col-1 img {
+        width: 90%;
     }
 }
 
 
+@media(min-width:768px) and (max-width:1023px) {
+
+    .row {
+        flex-direction: column;
+
+    }
+
+    .about-col-2 {
+        flex-basis: 70%;
+        margin-bottom: 20px;
+    }
+
+
+    .about-col-1 {
+        flex-basis: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-col-1 img {
+        width: 50%;
+    }
+
+}
 
 
 /*---------------------Skills Section------------------*/
 
+#skills {
+    padding: 1rem 9%
+}
+
 .myskill {
-     text-align: left;
-     font-size: 4rem;
+    text-align: left;
+    font-size: 4rem;
 }
 
 .linear h3 {
@@ -342,9 +444,9 @@ span{
     width: 500px;
     border: 1px solid purple;
     margin: 60px auto;
-    color:white;
-    padding:20px;
-    box-shadow: 0 14px 28px rgba(200, 197, 197, 0.25),0 14px 28px rgba(212, 208, 208, 0.25);
+    color: white;
+    padding: 20px;
+    box-shadow: 0 14px 28px rgba(200, 197, 197, 0.25), 0 14px 28px rgba(212, 208, 208, 0.25);
 }
 
 .linear li {
@@ -371,7 +473,7 @@ span{
 .bar span {
     height: 20px;
     float: left;
-    border:1px solid purple;
+    border: 1px solid purple;
     background: linear-gradient(135deg, rgb(86, 4, 80)0%, rgb(171, 5, 144)100%);
 }
 
@@ -406,61 +508,61 @@ span{
 }
 
 @keyframes html {
-    0%{
+    0% {
         width: 0;
     }
 
-    100%{
+    100% {
         width: 100%;
     }
 }
 
 @keyframes css {
-    0%{
+    0% {
         width: 0;
     }
 
-    100%{
+    100% {
         width: 100%;
     }
 }
 
 @keyframes javascript {
-    0%{
+    0% {
         width: 0;
     }
 
-    100%{
+    100% {
         width: 100%;
     }
 }
 
 @keyframes react {
-    0%{
+    0% {
         width: 0;
     }
 
-    100%{
+    100% {
         width: 90%;
     }
 }
 
 @keyframes expressJS {
-    0%{
+    0% {
         width: 0;
     }
 
-    100%{
+    100% {
         width: 80%;
     }
 }
 
 @keyframes mongoDB {
-    0%{
+    0% {
         width: 0;
     }
 
-    100%{
+    100% {
         width: 80%;
     }
 }
@@ -468,11 +570,11 @@ span{
 
 .circular {
     margin: 100px auto;
-    color:white;
-    padding:20px;
-    box-shadow: 0 14px 28px rgba(200, 197, 197, 0.25),0 14px 28px rgba(212, 208, 208, 0.25);
-    position:relative;
-    display:flex;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 14px 28px rgba(200, 197, 197, 0.25), 0 14px 28px rgba(212, 208, 208, 0.25);
+    position: relative;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
@@ -509,8 +611,8 @@ span{
     width: 120px;
     border-radius: 50%;
     background: #333;
-    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.75), 0 -2px 2px rgba(255, 255, 255, 0.5), 
-    inset 0 4px 2px rgba(0, 0, 0, 0.25), inset -2px 2px rgba(255, 255, 255, 0.5);
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.75), 0 -2px 2px rgba(255, 255, 255, 0.5),
+        inset 0 4px 2px rgba(0, 0, 0, 0.25), inset -2px 2px rgba(255, 255, 255, 0.5);
 }
 
 .circular .container2 .number {
@@ -533,13 +635,39 @@ span{
 
     to {
         background: conic-gradient(var(--color)0%, calc(var(--percentage)*1%), #222 calc(var(--percentage)*1%));
-     }
+    }
 }
 
-@media(max-width: 1000px) {
+
+@media(max-width: 639px) {
+    #skills {
+        padding: 0;
+    }
+
     .myskill {
         margin-bottom: 30px;
+        text-align: center;
     }
+
+    .linear {
+        margin: 0px;
+        margin: auto;
+        width: 300px;
+    }
+
+}
+
+
+@media(min-width: 640px) and (max-width: 1023px) {
+    #skills {
+        padding: 1rem 9%
+    }
+
+    .myskill {
+        margin-bottom: 30px;
+        margin-top: 100px;
+    }
+
     .linear {
         margin: 0px;
         margin: auto;
@@ -547,22 +675,11 @@ span{
     }
 }
 
-@media(max-width: 700px) {
-     .myskill {
-        margin-bottom: 30px;
-    }
-    .linear {
-        margin: 0px;
-        margin: auto;
-        width: 300px;
-    }
-}
-
-@media(max-width: 1000px) {
+@media(min-width: 640px) and (max-width: 1023px) {
     .circular {
         display: grid;
         grid-template: "content1 content2"
-        "content3 content4";
+            "content3 content4";
         justify-content: space-around;
     }
 
@@ -583,14 +700,21 @@ span{
     }
 }
 
-@media(max-width: 600px) {
+@media(max-width: 639px) {
+
+    .myskill {
+        margin-top: 100px;
+        text-align: center;
+    }
+
     .circular {
         width: 300px;
         display: grid;
         grid-template: "content1"
-        "content2"
-        "content3"
-        "content4";
+            "content2"
+            "content3"
+            "content4";
+        justify-content: center;
     }
 
     #content1 {
@@ -656,12 +780,12 @@ span{
     transform: translateY(-10px);
 }
 
-@media(max-width: 1000px) {
+@media(max-width: 1023px) {
     .services-list {
         display: grid;
-        grid-template:"content5" 
-        "content6"
-        "content7"
+        grid-template: "content5"
+            "content6"
+            "content7"
     }
 
     #content5 {
@@ -674,7 +798,7 @@ span{
 
     #content7 {
         grid-area: content7;
-}
+    }
 }
 
 /*-------------------My Projects-----------------*/
@@ -687,6 +811,7 @@ span{
 .project-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
     grid-gap: 40px;
     margin-top: 50px;
 }
@@ -698,8 +823,9 @@ span{
 }
 
 .project img {
-    width: 400px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
@@ -730,7 +856,7 @@ span{
 }
 
 .layer p {
-   font-size: 1.5rem 
+    font-size: 1.5rem
 }
 
 .layer a {
@@ -746,20 +872,20 @@ span{
     text-align: center;
 }
 
-.project:hover img{
+.project:hover img {
     transform: scale(1.1);
 }
 
-.project:hover .layer{
+.project:hover .layer {
     height: 100%;
 }
 
-@media(max-width: 1000px) {
+@media(min-width: 426px) and (max-width: 1023px) {
     .project-list {
         display: grid;
-        grid-template:"content8 content9" 
-        "content10 content11"
-        "content12 content13"
+        grid-template: "content8 content9"
+            "content10 content11"
+            "content12 content13"
     }
 
     #content8 {
@@ -787,16 +913,17 @@ span{
     }
 }
 
-@media(max-width: 500px) {
+@media(max-width: 426px) {
     .project-list {
         display: grid;
-        grid-template:"content8"
-        "content9" 
-        "content10" 
-        "content11"
-        "content12" 
-        "content13"
+        grid-template: "content8"
+            "content9"
+            "content10"
+            "content11"
+            "content12"
+            "content13"
     }
+
 
     #content8 {
         grid-area: content8;
@@ -845,7 +972,7 @@ span{
 }
 
 form input {
-    width: 47%;
+    width: 45%;
     border: 0px;
     outline: none;
     background: #262626;
@@ -857,7 +984,7 @@ form input {
 }
 
 form textarea {
-    width: 97%;
+    width: 93%;
     border: 0;
     outline: none;
     background: #262626;
@@ -868,17 +995,28 @@ form textarea {
     border-radius: 6px;
 }
 
-@media(max-width: 1270px) {
+@media(max-width: 1023px) {
+    #contact {
+        margin-top: 60px;
+    }
+
     form input {
         width: 100%;
     }
-}
 
-@media(max-width: 1270px) {
     form textarea {
         width: 100%;
     }
+
+    .formInfo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
+
 
 /*----------------------footer------------------*/
 
@@ -920,7 +1058,7 @@ form textarea {
 
 #msgSpan {
     display: block;
-    font-size: 1.4rem; 
+    font-size: 1.4rem;
     color: purple;
     margin-top: 8px;
 }
