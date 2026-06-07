@@ -437,133 +437,55 @@ span {
 }
 
 .linear h3 {
-    margin: 5px;
+    /* margin: 5px; */
+    font-size: 2rem;
+
 }
 
 .linear {
-    width: 500px;
-    border: 1px solid purple;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    max-height: 600px;
     margin: 60px auto;
-    color: white;
-    padding: 20px;
     box-shadow: 0 14px 28px rgba(200, 197, 197, 0.25), 0 14px 28px rgba(212, 208, 208, 0.25);
+    border: 1px solid purple;
+    color: white;
+}
+
+.linear-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: purple;
+    border: 1px solid black;
+
+}
+
+.linear-heading h2 {
+    font-size: 3rem
+}
+
+.skill-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    justify-items: center;
+    align-items: center;
 }
 
 .linear li {
     list-style: none;
     padding: 12px;
     margin: 20px 0px;
-}
 
-.bar {
-    background-color: #161616;
-    display: block;
-    height: 20px;
-    border: 1px solid rgb(164, 64, 164);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(204, 199, 199, 0.1), 0 1px 2px rgba(204, 199, 199, 0.1);
-    transition: all, 0.5s, linear, 0.5s;
-}
-
-.bar:hover {
-    box-shadow: 14px 28px rgba(142, 138, 138, 0.24);
-}
-
-.bar span {
-    height: 20px;
-    float: left;
-    border: 1px solid purple;
-    background: linear-gradient(135deg, rgb(86, 4, 80)0%, rgb(171, 5, 144)100%);
-}
-
-.html {
-    width: 100%;
-    animation: html 3s;
-}
-
-.css {
-    width: 100%;
-    animation: css 3s;
-}
-
-.javascript {
-    width: 100%;
-    animation: javascript 3s;
-}
-
-.react {
-    width: 90%;
-    animation: react 3s;
-}
-
-.expressJS {
-    width: 80%;
-    animation: expressJS 3s;
-}
-
-.mongoDB {
-    width: 80%;
-    animation: mongoDB 3s;
-}
-
-@keyframes html {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 100%;
-    }
-}
-
-@keyframes css {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 100%;
-    }
-}
-
-@keyframes javascript {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 100%;
-    }
-}
-
-@keyframes react {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 90%;
-    }
-}
-
-@keyframes expressJS {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 80%;
-    }
-}
-
-@keyframes mongoDB {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 80%;
+    &:hover {
+        color: rgb(164, 64, 164);
+        scale: 1.5;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
     }
 }
 
@@ -571,17 +493,13 @@ span {
 .circular {
     margin: 100px auto;
     color: white;
-    padding: 20px;
     box-shadow: 0 14px 28px rgba(200, 197, 197, 0.25), 0 14px 28px rgba(212, 208, 208, 0.25);
-    position: relative;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
+    flex-direction: column;
     border: 1px solid purple;
 }
 
-.circular .container2 {
+.skill-box2 .container2 {
     width: 200px;
     height: 200px;
     border: 1px solid black;
@@ -595,7 +513,7 @@ span {
     animation: fillprogress 2s linear forwards;
 }
 
-.circular .container2::before {
+.skill-box2 .container2::before {
     content: "";
     position: absolute;
     background: #222;
@@ -604,7 +522,7 @@ span {
     opacity: 0.8;
 }
 
-.circular .container2::after {
+.skill-box2 .container2::after {
     content: "";
     position: absolute;
     height: 120px;
@@ -615,17 +533,26 @@ span {
         inset 0 4px 2px rgba(0, 0, 0, 0.25), inset -2px 2px rgba(255, 255, 255, 0.5);
 }
 
-.circular .container2 .number {
+.skill-box2 .container2 .number {
     position: relative;
     color: white;
     line-height: 1em;
     z-index: 10;
 }
 
-.circular .container2 h4 {
+.skill-box2 .container2 h4 {
     color: white;
     z-index: 10;
     font-size: 1.5rem;
+}
+
+.skill-box2 {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 20px
 }
 
 @keyframes fillprogress {
@@ -649,10 +576,25 @@ span {
         text-align: center;
     }
 
+    .linear h3 {
+        font-size: 1.5rem;
+
+    }
+
+    .linear-heading h2 {
+        font-size: 2rem
+    }
+
+
     .linear {
         margin: 0px;
         margin: auto;
         width: 300px;
+    }
+
+    .skill-box {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 10px;
     }
 
 }
@@ -673,10 +615,20 @@ span {
         margin: auto;
         width: 500px;
     }
+
+    .linear-heading h2 {
+        font-size: 2.5rem
+    }
+
+
+    .linear h3 {
+        font-size: 1.8rem;
+
+    }
 }
 
 @media(min-width: 640px) and (max-width: 1023px) {
-    .circular {
+    .skill-box2 {
         display: grid;
         grid-template: "content1 content2"
             "content3 content4";
@@ -709,6 +661,9 @@ span {
 
     .circular {
         width: 300px;
+    }
+
+    .skill-box2 {
         display: grid;
         grid-template: "content1"
             "content2"
@@ -781,6 +736,11 @@ span {
 }
 
 @media(max-width: 1023px) {
+
+    .services-list div {
+        padding: 20px
+    }
+
     .services-list {
         display: grid;
         grid-template: "content5"
@@ -883,9 +843,7 @@ span {
 @media(min-width: 426px) and (max-width: 1023px) {
     .project-list {
         display: grid;
-        grid-template: "content8 content9"
-            "content10 content11"
-            "content12 content13"
+        grid-template: "content8 content9 content10"
     }
 
     #content8 {
@@ -900,17 +858,6 @@ span {
         grid-area: content10;
     }
 
-    #content11 {
-        grid-area: content11;
-    }
-
-    #content12 {
-        grid-area: content12;
-    }
-
-    #content13 {
-        grid-area: content13;
-    }
 }
 
 @media(max-width: 426px) {
@@ -919,9 +866,6 @@ span {
         grid-template: "content8"
             "content9"
             "content10"
-            "content11"
-            "content12"
-            "content13"
     }
 
 
@@ -937,24 +881,13 @@ span {
         grid-area: content10;
     }
 
-    #content11 {
-        grid-area: content11;
-    }
-
-    #content12 {
-        grid-area: content12;
-    }
-
-    #content13 {
-        grid-area: content13;
-    }
 }
 
 /*--------------------Contact----------------------->*/
 
 #contact {
     padding: 1rem 9%;
-    margin-top: 120px;
+    margin-top: 0px;
 }
 
 .my-contactInfo {
@@ -1002,10 +935,12 @@ form textarea {
 
     form input {
         width: 100%;
+        margin: 10px 0px;
     }
 
     form textarea {
         width: 100%;
+        margin: 10px 0px;
     }
 
     .formInfo {
