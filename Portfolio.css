@@ -843,7 +843,11 @@ span {
 @media(min-width: 426px) and (max-width: 1023px) {
     .project-list {
         display: grid;
-        grid-template: "content8 content9 content10"
+        grid-template: "content7 content8 content9 content10"
+    }
+
+     #content7 {
+        grid-area: content7;
     }
 
     #content8 {
@@ -863,11 +867,15 @@ span {
 @media(max-width: 426px) {
     .project-list {
         display: grid;
-        grid-template: "content8"
+        grid-template: "content7"
+            "content8"
             "content9"
             "content10"
     }
 
+    #content7 {
+        grid-area: content7;
+    }
 
     #content8 {
         grid-area: content8;
